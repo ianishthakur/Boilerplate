@@ -13,7 +13,7 @@ class RouteGenerator {
       case Routes.onboarding:
         return MaterialPageRoute(builder: (_) => OnboardPage());
       case Routes.login:
-        return MaterialPageRoute(builder: (_)=> LoginScreen ());
+        return MaterialPageRoute(builder: (_) => LoginScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => SplashPage());
