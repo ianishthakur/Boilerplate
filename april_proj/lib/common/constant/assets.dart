@@ -3,7 +3,7 @@ class Assets {
   static const _iconsPath = "assets/icons/";
   //splash
 
-  static const splashIcons = _iconsPath + "call.png";
+  static const icons = _iconsPath + "call.png";
 
   //Icons
 

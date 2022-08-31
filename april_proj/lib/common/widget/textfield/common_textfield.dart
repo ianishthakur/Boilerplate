@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CommonTextField extends StatelessWidget {
-  const CommonTextField(
-      {Key? key,
-      required this.controller,
-      this.obscureText = false,
-      this.validator,
-      this.hintText = "",
-      this.suffixIcon,
-      this.focusNode,
-      this.textInputAction = TextInputAction.next,
-      this.keyboardType = TextInputType.text,
-      this.prefixIcon,
-      required this.label,})
-      : super(key: key);
+  const CommonTextField({
+    Key? key,
+    required this.controller,
+    this.obscureText = false,
+    this.validator,
+    this.hintText = "",
+    this.suffixIcon,
+    this.focusNode,
+    this.textInputAction = TextInputAction.next,
+    this.keyboardType = TextInputType.text,
+    this.prefixIcon,
+    required this.label,
+  }) : super(key: key);
 
   final TextEditingController controller;
   final bool obscureText;
@@ -30,17 +30,29 @@ class CommonTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label),
+        Text(label, style: TextStyle(color: Colors.grey)),
         TextFormField(
           autovalidateMode: AutovalidateMode.disabled,
           controller: controller,
           obscureText: obscureText,
           validator: validator,
           focusNode: focusNode,
+          style: TextStyle(fontWeight: FontWeight.w500),
           decoration: InputDecoration(
-              hintText: hintText,
-              focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black))),
+            hintText: hintText,
+            hintStyle: TextStyle(fontSize: (12), color: Colors.grey),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.black, width: 1),
+            ),
+            enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(width: 1, color: Colors.blue),
+                borderRadius: BorderRadius.circular(14)),
+            errorBorder: UnderlineInputBorder(
+                borderSide: BorderSide(width: 1, color: Colors.red),
+                borderRadius: BorderRadius.circular(14)),
+            suffixIcon: suffixIcon,
+            prefixIcon: prefixIcon,
+          ),
         ),
       ],
     );

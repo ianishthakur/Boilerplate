@@ -1,5 +1,11 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 class Strings {
   static const APP_TITLE = "Galaxy 4k";
+
+  //Splash Screen
+  static const splashtitle = "Every Solutions in one click";
 
   //Onboarding Texts
   static const onboading1Title = "Welcome to GharSubidha App";
@@ -13,7 +19,7 @@ class Strings {
       "Our App is super friendly and kind. Welcome here! ";
 
   //LogIn Page
-  static const hello = "Hello";
+  static const signin = "Sign In";
   static const welcomeBack = "Welcome Back";
   static const emailLable = "Email";
   static const passwordLable = "Password";
@@ -21,7 +27,12 @@ class Strings {
   static const emailHint = "Enter your email";
   static const passwordHint = "Enter your password";
   static const hide = "Hide";
-  static const forgetPassword = "Forget Password";
-  static const createdAccount = "Create Account";
+  static const remberme = "Remember Me";
+  static const forgetPassword = "Forget Password ?";
+  static const signUp = "Don't have a Account? Sign Up";
   static const loginText = "Login";
+}
+
+class UiColors {
+  static const textColor = "";
 }

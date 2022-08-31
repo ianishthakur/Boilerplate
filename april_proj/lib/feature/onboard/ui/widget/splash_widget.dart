@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/constant/assets.dart';
+import '../../../../common/constant/strings.dart';
 
 class SplashWidget extends StatelessWidget {
   @override
@@ -12,14 +13,22 @@ class SplashWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(Assets.splashIcons, height: 200, width: 200),
+            Image.asset(Assets.icons, height: 200, width: 200),
             SizedBox(
-              height: 20,
+              height: 30,
+            ),
+            Text(
+              Strings.splashtitle,
+              style:
+                  TextStyle(fontSize: 18, decorationColor: Colors.greenAccent),
+            ),
+            SizedBox(
+              height: 50,
             ),
             CircularProgressIndicator(
               strokeWidth: 3,
               color: Colors.green,
-            )
+            ),
           ],
         ),
       ),
