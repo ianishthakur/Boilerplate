@@ -3,4 +3,5 @@ class Routes {
   static const onboarding = "/onboarding";
   static const dashboard = "/dashboard";
   static const login = "/login";
+  static const singup = "/signup";
 }

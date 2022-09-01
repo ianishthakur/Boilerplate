@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CommonTextField extends StatelessWidget {
-  const CommonTextField({
+class LogInCommonTextField extends StatelessWidget {
+  const LogInCommonTextField({
     Key? key,
     required this.controller,
     this.obscureText = false,
@@ -41,12 +41,19 @@ class CommonTextField extends StatelessWidget {
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextStyle(fontSize: (12), color: Colors.grey),
-            focusedBorder: UnderlineInputBorder(
+            border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.black, width: 1),
             ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.black,
+              ),
+            ),
             enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(width: 1, color: Colors.blue),
-                borderRadius: BorderRadius.circular(14)),
+                borderSide: BorderSide(
+                  color: Colors.blue,
+                ),
+                borderRadius: BorderRadius.circular(0.4)),
             errorBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.red),
                 borderRadius: BorderRadius.circular(14)),

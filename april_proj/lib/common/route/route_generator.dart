@@ -1,3 +1,4 @@
+import 'package:boilerplate/feature/authentication/ui/screen/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:boilerplate/common/route/routes.dart';
 import 'package:boilerplate/feature/onboard/ui/screen/onboard_page.dart';
@@ -14,6 +15,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => OnboardPage());
       case Routes.login:
         return MaterialPageRoute(builder: (_) => LoginScreen());
+      case Routes.singup:
+        return MaterialPageRoute(
+          builder: (_) => SignUpScreen(),
+        );
 
       default:
         return MaterialPageRoute(builder: (_) => SplashPage());
