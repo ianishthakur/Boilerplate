@@ -7,6 +7,11 @@ class Strings {
   //Splash Screen
   static const splashtitle = "Every Solutions in one click";
 
+  //
+  static const selectLang = "Please select your language";
+  static const english = "English";
+  static const nepali = "Nepali";
+
   //Onboarding Texts
   static const onboading1Title = "Welcome to GharSubidha App";
   static const onboading1des =
@@ -28,7 +33,7 @@ class Strings {
   static const passwordHint = "Enter your password";
   static const hide = "Hide";
   static const remberme = "Remember Me";
-  static const forgetPassword = "Forget Password ?";
+  static const forgotPassword = "Forgot Password ?";
   static const signUp = "Sign up";
   static const dontHaveAcc = "Don't have a Account? ";
   static const loginText = "Login";
@@ -43,7 +48,6 @@ class Strings {
   static const enterAdd2 = "Enter your second address";
   static const enterEmail = "Enter your email";
   static const enterPhoneNo = "Enter your phone no.";
-
   static const parmanentAdd = "Parmenent Address";
   static const secondAdd = "Secondary Address";
   static const phoneNo = "Phone Number";
@@ -82,4 +86,29 @@ class Strings {
   static const register = "Register Now";
   static const alreadyHaveAnAcc = "Already have an account?";
   static const signIn = "Signin";
+
+
+
+  //Forget Password
+
+static const textForgotPassword = "Forgot Password";
+static const emailPhoneNo = "E-mail or Phone Number";
+static const enterEmailOrPhone = "Enter your email/phone no.";
+static const sendCode = "Send Code";
+static const reSendCode = "Re-send Code";
+static const enterYourCode = "Enter Your Code";
+static const verify = "Verify";
+
+
+
+//Create New Password
+
+static const createPassword = "Create New Password";
+static const enterYourNewPassword = "Enter Your New Password";
+static const changePasswordlabel = "User@123";
+static const reChangePasswordlabel = "User@123";
+static const reEnterYourNewPassword= "Re-Enter Your New Password";
+static const savePassword = "Save";
+
 }
+

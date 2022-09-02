@@ -13,8 +13,8 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 4), () {
-      Navigator.pushReplacementNamed(context, Routes.onboarding);
+    Timer(Duration(seconds: 2), () {
+      Navigator.pushReplacementNamed(context, Routes.selectLanguage);
     });
   }
 

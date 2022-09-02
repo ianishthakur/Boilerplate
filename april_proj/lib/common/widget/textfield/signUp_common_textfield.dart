@@ -9,6 +9,7 @@ class SignUpCommonTextField extends StatelessWidget {
     this.obscureText = false,
     this.validator,
     this.hintText = "",
+    this.hintStyle,
     this.labelText,
     this.suffixIcon,
     this.focusNode,
@@ -20,6 +21,7 @@ class SignUpCommonTextField extends StatelessWidget {
 
   final TextEditingController controller;
   final String? labelText;
+  final TextStyle? hintStyle;
   final bool obscureText;
   final String? Function(String?)? validator;
   final String hintText;
@@ -40,7 +42,7 @@ class SignUpCommonTextField extends StatelessWidget {
           width: double.infinity,
           child: Text(
             label,
-            style: TextStyle(color: Colors.blue),
+            style: TextStyle(fontSize: 18, color: Colors.blue),
           ),
         ),
         TextFormField(
@@ -55,7 +57,7 @@ class SignUpCommonTextField extends StatelessWidget {
           decoration: InputDecoration(
             labelText: labelText,
             hintText: hintText,
-            hintStyle: TextStyle(fontSize: (12), color: Colors.grey),
+            hintStyle: hintStyle,
             border: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.green, width: 1),
             ),

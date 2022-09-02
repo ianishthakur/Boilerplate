@@ -6,10 +6,10 @@ import '../../../../common/constant/strings.dart';
 class SplashWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
+    final splashwidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
-        width: width,
+        width: splashwidth,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

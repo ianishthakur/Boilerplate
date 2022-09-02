@@ -30,7 +30,7 @@ class LogInCommonTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: TextStyle(color: Colors.grey)),
+        Text(label, style: TextStyle(fontSize: 16, color: Colors.grey)),
         TextFormField(
           autovalidateMode: AutovalidateMode.disabled,
           controller: controller,
@@ -40,7 +40,7 @@ class LogInCommonTextField extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.w500),
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyle(fontSize: (12), color: Colors.grey),
+            hintStyle: TextStyle(fontSize: (14), color: Colors.grey),
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.black, width: 1),
             ),
@@ -51,6 +51,7 @@ class LogInCommonTextField extends StatelessWidget {
             ),
             enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(
+                  width: 1,
                   color: Colors.blue,
                 ),
                 borderRadius: BorderRadius.circular(0.4)),

@@ -38,7 +38,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                   Column(
                     children: [
-                      Image.asset(Assets.icons, height: 100, width: 150),
+                      Image.asset(Assets.icons, height: 100, width: 100),
                       SizedBox(
                         height: 10,
                       ),
@@ -52,7 +52,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       Text(
                         Strings.signInText,
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.grey),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
                       ),
                     ],
                   ),
@@ -95,7 +97,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                   Row(
                     children: [
-                      Container(
+                      MaterialButton(
+                        onPressed: () {},
                         child: Checkbox(
                           value: checkBox,
                           onChanged: (bool? value) {
@@ -106,16 +109,15 @@ class _LoginWidgetState extends State<LoginWidget> {
                           },
                         ),
                       ),
-                      Container(
-                        child: Text(Strings.remberme,
-                            style: TextStyle(color: Colors.grey)),
-                      ),
-                      SizedBox(width: 40),
+                      Text(Strings.remberme,
+                          style: TextStyle(color: Colors.grey)),
                       Container(
                         child: MaterialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, Routes.forgotPassword);
+                          },
                           child: Text(
-                            Strings.forgetPassword,
+                            Strings.forgotPassword,
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.blue,

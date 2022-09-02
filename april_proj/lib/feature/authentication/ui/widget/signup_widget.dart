@@ -17,7 +17,11 @@ class SignUpWidget extends StatefulWidget {
 }
 
 class _SignUpWidgetState extends State<SignUpWidget> {
-  final textController = TextEditingController();
+  final nameTextController = TextEditingController();
+  final parAddressTextController = TextEditingController();
+  final secAddressTextController = TextEditingController();
+  final phoneNoTextController = TextEditingController();
+  final emailTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -38,7 +42,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       SignUpCommonTextField(
                         label: Strings.fullName,
-                        controller: textController,
+                        controller: nameTextController,
                         textInputAction: TextInputAction.next,
                         prefixIcon: Icon(
                           Icons.person,
@@ -48,7 +52,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       SignUpCommonTextField(
                         label: Strings.parmanentAdd,
-                        controller: textController,
+                        controller: parAddressTextController,
                         prefixIcon: Icon(
                           Icons.location_on_sharp,
                           color: Colors.blue,
@@ -57,7 +61,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       SignUpCommonTextField(
                         label: Strings.secondAdd,
-                        controller: textController,
+                        controller: secAddressTextController,
                         prefixIcon: Icon(
                           Icons.location_on_sharp,
                           color: Colors.blue,
@@ -66,7 +70,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       SignUpCommonTextField(
                         label: Strings.phoneNo,
-                        controller: textController,
+                        controller: phoneNoTextController,
                         prefixIcon: Icon(
                           Icons.phone,
                           color: Colors.blue,
@@ -75,7 +79,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       SignUpCommonTextField(
                         label: Strings.email,
-                        controller: textController,
+                        controller: emailTextController,
                         prefixIcon: Icon(
                           Icons.email_outlined,
                           color: Colors.blue,
