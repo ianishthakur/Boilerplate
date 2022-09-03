@@ -1,3 +1,4 @@
+import 'package:boilerplate/common/widget/ui/fotter_common_ui.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,8 +25,8 @@ class _LoginWidgetState extends State<LoginWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+    return FotterWidget(
+      component: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: BlocListener<AuthenticationCubit, AuthState>(
@@ -109,8 +110,15 @@ class _LoginWidgetState extends State<LoginWidget> {
                           },
                         ),
                       ),
-                      Text(Strings.remberme,
-                          style: TextStyle(color: Colors.grey)),
+                      GestureDetector(
+                        child: Text(Strings.remberme,
+                            style: TextStyle(color: Colors.grey)),
+                        onTap: () {
+                          setState(() {
+                            checkBox = !checkBox;
+                          });
+                        },
+                      ),
                       Container(
                         child: MaterialButton(
                           onPressed: () {
