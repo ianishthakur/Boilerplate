@@ -27,7 +27,6 @@ class _DropDownWidgetState extends State<DropDownWidget> {
     "Sudur Pashchim Pradesh",
   ];
   String? _selectedVal = "";
-  // String? selectedItem = "Province No 1";
   // final _provinceList = [DropDown.provincelist];
   // final _districtList = [DropDown.districtList];
   // final _municipalityList = [DropDown.municipalityList];
@@ -37,21 +36,24 @@ class _DropDownWidgetState extends State<DropDownWidget> {
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
-      body: Container(
-          child: DropdownButtonFormField(
-        value: _selectedVal,
-        items: _provinceList
-            .map((e) => DropdownMenuItem(
-                  child: Text(e),
-                  value: e,
-                ))
-            .toList(),
-        onChanged: (value) {
-          setState(() {
-            _selectedVal = value as String;
-          });
-        },
-      )),
+      body: Column(
+        children: [
+          DropdownButtonFormField(
+            value: _selectedVal,
+            items: _provinceList
+                .map((e) => DropdownMenuItem(
+                      child: Text(e),
+                      value: e,
+                    ))
+                .toList(),
+            onChanged: (value) {
+              setState(() {
+                _selectedVal = value as String;
+              });
+            },
+          ),
+        ],
+      ),
     ));
   }
 }

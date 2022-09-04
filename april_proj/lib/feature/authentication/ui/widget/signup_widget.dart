@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
 import '../../../../common/widget/textfield/dropdown_common_textfield.dart';
+import '../../../../common/widget/textfield/imagePicker_common.dart';
 import '../../../../common/widget/textfield/signUp_common_textfield.dart';
 import '../../bloc/authentication_cubit.dart';
 import '../../bloc/authentication_state.dart';
@@ -97,12 +98,32 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         labelText: Strings.rePasswordlabel,
                       ),
                       SizedBox(
-                        height: 40,
+                        height: 10,
                       ),
                       SizedBox(
-                        height: 100,
+                        height: 50,
                         child: DropDownWidget(),
                       ),
+                      SizedBox(
+                        height: 50,
+                        child: DropDownWidget(),
+                      ),
+                      SizedBox(
+                        height: 50,
+                        child: DropDownWidget(),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 500,
+                            width: 500,
+                            child: ImagePickerWidget(),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),
