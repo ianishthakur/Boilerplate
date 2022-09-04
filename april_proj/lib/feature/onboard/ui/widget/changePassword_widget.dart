@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
+import '../../../../common/route/routes.dart';
 
 class ChangePasswordWidget extends StatefulWidget {
   const ChangePasswordWidget({Key? key}) : super(key: key);
@@ -80,7 +81,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                     height: 20,
                   ),
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.login);
+                    },
                     color: Colors.blue,
                     minWidth: 150,
                     height: 48,

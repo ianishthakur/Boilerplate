@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
+import '../../../../common/widget/textfield/dropdown_common_textfield.dart';
 import '../../../../common/widget/textfield/signUp_common_textfield.dart';
 import '../../bloc/authentication_cubit.dart';
 import '../../bloc/authentication_state.dart';
@@ -18,10 +17,14 @@ class SignUpWidget extends StatefulWidget {
 
 class _SignUpWidgetState extends State<SignUpWidget> {
   final nameTextController = TextEditingController();
-  final parAddressTextController = TextEditingController();
-  final secAddressTextController = TextEditingController();
-  final phoneNoTextController = TextEditingController();
+  final passwordTextController = TextEditingController();
+  final rePasswordTextController = TextEditingController();
+  final contactNoTextController = TextEditingController();
   final emailTextController = TextEditingController();
+  final municipalityTextController = TextEditingController();
+  final wardTextController = TextEditingController();
+  final toleTextController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -38,10 +41,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                     children: [
                       Image.asset(Assets.icons, height: 100, width: 150),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
                       SignUpCommonTextField(
-                        label: Strings.fullName,
                         controller: nameTextController,
                         textInputAction: TextInputAction.next,
                         prefixIcon: Icon(
@@ -50,41 +52,56 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         ),
                         labelText: Strings.enterName,
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       SignUpCommonTextField(
-                        label: Strings.parmanentAdd,
-                        controller: parAddressTextController,
+                        controller: emailTextController,
                         prefixIcon: Icon(
                           Icons.location_on_sharp,
                           color: Colors.blue,
                         ),
-                        labelText: Strings.enterAdd1,
+                        labelText: Strings.emailHint,
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       SignUpCommonTextField(
-                        label: Strings.secondAdd,
-                        controller: secAddressTextController,
+                        controller: contactNoTextController,
                         prefixIcon: Icon(
                           Icons.location_on_sharp,
                           color: Colors.blue,
                         ),
-                        labelText: Strings.enterAdd2,
+                        labelText: Strings.enterContactNo,
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       SignUpCommonTextField(
-                        label: Strings.phoneNo,
-                        controller: phoneNoTextController,
+                        controller: passwordTextController,
                         prefixIcon: Icon(
                           Icons.phone,
                           color: Colors.blue,
                         ),
-                        labelText: Strings.enterPhoneNo,
+                        labelText: Strings.passwordlabel,
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       SignUpCommonTextField(
-                        label: Strings.email,
-                        controller: emailTextController,
+                        controller: rePasswordTextController,
                         prefixIcon: Icon(
                           Icons.email_outlined,
                           color: Colors.blue,
                         ),
-                        labelText: Strings.enterEmail,
+                        labelText: Strings.rePasswordlabel,
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      SizedBox(
+                        height: 100,
+                        child: DropDownWidget(),
                       ),
                     ],
                   ),

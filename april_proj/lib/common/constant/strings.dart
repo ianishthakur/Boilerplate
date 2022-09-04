@@ -44,19 +44,13 @@ class Strings {
   //SignUp Page
   static const fullName = "Full Name";
   static const enterName = "Enter your name";
-  static const enterAdd1 = "Enter your first address";
-  static const enterAdd2 = "Enter your second address";
+  static const passwordlabel = "Enter your password";
+  static const rePasswordlabel = "Re-enter your password";
   static const enterEmail = "Enter your email";
-  static const enterPhoneNo = "Enter your phone no.";
-  static const parmanentAdd = "Parmenent Address";
-  static const secondAdd = "Secondary Address";
-  static const phoneNo = "Phone Number";
+  static const enterContactNo = "Enter your contact no.";
+  static const rePassword = "Confirm Password";
+  static const ContactNo = "Contact Number";
   static const email = "Email";
-  static const gender = "Gender";
-  static const male = "Male";
-  static const female = "Female";
-  static const others = "Others";
-  static const dob = "DOB";
   static const profileImage = "Profile Image";
   static const uploadImage = "Upload Image";
   static const takePic = "Take Photo";
@@ -68,17 +62,21 @@ class Strings {
   static const password = "Password";
   static const confirmPass = "Confirm-Password";
   static const province = "Province";
-  static const District = "District";
+  static const district = "District";
   static const selectProv = "Select Province";
   static const selectDist = "Select District";
   static const municipality = "Municipality";
   static const ward = "Ward";
+  static const selectWard = "Select Ward";
   static const selectMuni = "Select Municipality";
   static const selectTole = "Select Tole";
   static const tole = "Tole";
   static const selectProfilePic = "Select Profile Image";
   static const selectFile = "Select File";
   static const noFileSelected = "No File Selected";
+  static const takePhoto = "Take Photo";
+  static const idNumber = "ID Number";
+  static const idNoLabel = "1234-56-7890";
   static const iAccept = "I Accept the";
   static const terms = "Terms of Use";
   static const and = "&";
@@ -87,28 +85,67 @@ class Strings {
   static const alreadyHaveAnAcc = "Already have an account?";
   static const signIn = "Signin";
 
-
-
   //Forget Password
 
-static const textForgotPassword = "Forgot Password";
-static const emailPhoneNo = "E-mail or Phone Number";
-static const enterEmailOrPhone = "Enter your email/phone no.";
-static const sendCode = "Send Code";
-static const reSendCode = "Re-send Code";
-static const enterYourCode = "Enter Your Code";
-static const verify = "Verify";
-
-
+  static const textForgotPassword = "Forgot Password";
+  static const emailPhoneNo = "E-mail or Phone Number";
+  static const enterEmailOrPhone = "Enter your email/phone no.";
+  static const sendCode = "Send Code";
+  static const reSendCode = "Re-send Code";
+  static const enterYourCode = "Enter Your Code";
+  static const verify = "Verify";
 
 //Create New Password
 
-static const createPassword = "Create New Password";
-static const enterYourNewPassword = "Enter Your New Password";
-static const changePasswordlabel = "User@123";
-static const reChangePasswordlabel = "User@123";
-static const reEnterYourNewPassword= "Re-Enter Your New Password";
-static const savePassword = "Save";
+  static const createPassword = "Create New Password";
+  static const enterYourNewPassword = "Enter Your New Password";
+  static const changePasswordlabel = "User@123";
+  static const reChangePasswordlabel = "User@123";
+  static const reEnterYourNewPassword = "Re-Enter Your New Password";
+  static const savePassword = "Save";
+
+  //DropDown List
 
 }
 
+class DropDown {
+  static const provincelist = [
+    "Province No 1.",
+    "Madhesh Pradesh",
+    " Bagmati Pradesh",
+    "Gandaki Pradesh",
+    "Lumbini Pradesh",
+    "Karnali Pradesh",
+    "Sudur Pashchim Pradesh",
+  ];
+  static const districtList = [
+    "Bhojpur",
+    "Dhankuta",
+    "Ilam",
+    "Jhapa",
+    "Khotang",
+    "Morang",
+    "Okhaldhunga",
+    "Panchthar",
+    "Sankhuwasabha",
+    "Solukhumbu",
+    "Sunsari",
+    "Taplejung",
+    "Terhathum",
+    "Udayapur",
+  ];
+  static const municipalityList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  static const wardList = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+  ];
+  static const toleList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+}
