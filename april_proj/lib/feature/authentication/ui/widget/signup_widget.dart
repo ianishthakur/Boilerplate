@@ -36,24 +36,24 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   File? _image;
 
   //DropDown TextField
-  // _DropDownWidgetState() {
-  //   _selectedVal = _provinceList[0];
-  //   _selectedVal2 = _districtList[0];
-  //   _selectedVal3 = _municipalityList[0];
-  //   _selectedVal4 = _wardList[0];
-  //   _selectedVal5 = _toleList[0];
-  // }
+  _DropDownWidgetState() {
+    _selectedVal = _provinceList[0];
+    _selectedVal2 = _districtList[0];
+    _selectedVal3 = _municipalityList[0];
+    _selectedVal4 = _wardList[0];
+    _selectedVal5 = _toleList[0];
+  }
 
-  // String? _selectedVal = "";
-  // String? _selectedVal2 = "";
-  // String? _selectedVal3 = "";
-  // String? _selectedVal4 = "";
-  // String? _selectedVal5 = "";
-  // final _provinceList = DropDown.provincelist;
-  // final _districtList = DropDown.districtList;
-  // final _municipalityList = DropDown.municipalityList;
-  // final _wardList = DropDown.wardList;
-  // final _toleList = DropDown.toleList;
+  String? _selectedVal = "";
+  String? _selectedVal2 = "";
+  String? _selectedVal3 = "";
+  String? _selectedVal4 = "";
+  String? _selectedVal5 = "";
+  final _provinceList = DropDown.provincelist;
+  final _districtList = DropDown.districtList;
+  final _municipalityList = DropDown.municipalityList;
+  final _wardList = DropDown.wardList;
+  final _toleList = DropDown.toleList;
 
   Future pickImage(ImageSource source) async {
     try {
@@ -170,7 +170,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 62, child: DropDownWidget()),
+                        Container(
+                            height: 130,
+                            child:
+                                SizedBox(height: 100, child: DropDownWidget())),
                         Container(
                           margin: EdgeInsets.symmetric(vertical: 10),
                           width: double.infinity,

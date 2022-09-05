@@ -24,8 +24,8 @@ class DropdownTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
+    return 
+       Column(
         children: [
           DropdownButtonFormField(
             decoration: InputDecoration(
@@ -55,7 +55,7 @@ class DropdownTest extends StatelessWidget {
             },
           ),
         ],
-      ),
+      
     );
   }
 }
