@@ -41,47 +41,105 @@ class _DropDownWidgetState extends State<DropDownWidget> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  child: DropdownButton(
-                    borderRadius: BorderRadius.circular(10),
-                    focusColor: Colors.green,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
+                  padding: EdgeInsets.all(6.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.5),
+                    border: Border.all(color: Colors.blue),
+                  ),
+                  child: SizedBox(
+                    width: 140,
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton(
+                        icon: Icon(Icons.arrow_drop_down_circle_outlined),
+                        iconSize: 24,
+                        iconEnabledColor: Colors.blue,
+                        isExpanded: true,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                        ),
+                        value: _selectedVal,
+                        items: _provinceList
+                            .map((e) => DropdownMenuItem(
+                                  child: Text(e),
+                                  value: e,
+                                ))
+                            .toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedVal = value as String;
+                          });
+                        },
+                      ),
                     ),
-                    value: _selectedVal,
-                    items: _provinceList
-                        .map((e) => DropdownMenuItem(
-                              child: Text(e),
-                              value: e,
-                            ))
-                        .toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        _selectedVal = value as String;
-                      });
-                    },
                   ),
                 ),
                 Container(
-                  child: DropdownButton(
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
+                  padding: EdgeInsets.all(6.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.5),
+                    border: Border.all(color: Colors.blue),
+                  ),
+                  child: SizedBox(
+                    width: 140,
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton(
+                        icon: Icon(Icons.arrow_drop_down_circle_outlined),
+                        iconSize: 24,
+                        iconEnabledColor: Colors.blue,
+                        isExpanded: true,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                        ),
+                        value: _selectedVal2,
+                        items: _districtList
+                            .map((e) => DropdownMenuItem(
+                                  child: Text(e),
+                                  value: e,
+                                ))
+                            .toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedVal2 = value as String;
+                          });
+                        },
+                      ),
                     ),
-                    value: _selectedVal2,
-                    items: _districtList
-                        .map((e) => DropdownMenuItem(
-                              child: Text(e),
-                              value: e,
-                            ))
-                        .toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        _selectedVal2 = value as String;
-                      });
-                    },
                   ),
                 ),
+                // Container(
+                //   padding: EdgeInsets.all(6.0),
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(5.5),
+                //     border: Border.all(color: Colors.blue),
+                //   ),
+                //   child: SizedBox(
+                //     width: 100,
+                //     child: DropdownButtonHideUnderline(
+                //       child: DropdownButton(
+                //         iconEnabledColor: Colors.blue,
+                //         isExpanded: true,
+                //         style: TextStyle(
+                //           color: Colors.black,
+                //           fontSize: 12,
+                //         ),
+                //         value: _selectedVal3,
+                //         items: _municipalityList
+                //             .map((e) => DropdownMenuItem(
+                //                   child: Text(e),
+                //                   value: e,
+                //                 ))
+                //             .toList(),
+                //         onChanged: (value) {
+                //           setState(() {
+                //             _selectedVal3 = value as String;
+                //           });
+                //         },
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ],

@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 
 import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
+import '../../../../common/widget/textfield/dropdown.02.dart';
 import '../../../../common/widget/textfield/dropdown_common_textfield.dart';
 import '../../../../common/widget/textfield/signUp_common_textfield.dart';
 import '../../bloc/authentication_cubit.dart';
@@ -33,6 +34,26 @@ class _SignUpWidgetState extends State<SignUpWidget> {
 
   //ImagePicker Text Field
   File? _image;
+
+  //DropDown TextField
+  // _DropDownWidgetState() {
+  //   _selectedVal = _provinceList[0];
+  //   _selectedVal2 = _districtList[0];
+  //   _selectedVal3 = _municipalityList[0];
+  //   _selectedVal4 = _wardList[0];
+  //   _selectedVal5 = _toleList[0];
+  // }
+
+  // String? _selectedVal = "";
+  // String? _selectedVal2 = "";
+  // String? _selectedVal3 = "";
+  // String? _selectedVal4 = "";
+  // String? _selectedVal5 = "";
+  // final _provinceList = DropDown.provincelist;
+  // final _districtList = DropDown.districtList;
+  // final _municipalityList = DropDown.municipalityList;
+  // final _wardList = DropDown.wardList;
+  // final _toleList = DropDown.toleList;
 
   Future pickImage(ImageSource source) async {
     try {
@@ -61,7 +82,6 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: width,
-                    height: height,
                     child: Column(
                       children: [
                         Image.asset(Assets.icons, height: 100, width: 150),
@@ -124,17 +144,40 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         SizedBox(
                           height: 10,
                         ),
-                        SizedBox(height: 150, child: DropDownWidget()),
-                        SizedBox(
-                          height: 10,
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Expanded(
+                              child: Container(
+                                child: Text(
+                                  Strings.province,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: 150,
+                              child: Text(
+                                Strings.district,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
+                        SizedBox(height: 62, child: DropDownWidget()),
                         Container(
                           margin: EdgeInsets.symmetric(vertical: 10),
                           width: double.infinity,
                           child: Text(Strings.selectProfilePic,
                               style: TextStyle(
                                 color: Colors.blue,
-                                fontSize: 16,
+                                fontSize: 18,
                               ),
                               textAlign: TextAlign.left),
                         ),
