@@ -26,7 +26,7 @@ class Strings {
   //LogIn Page
   static const logIn = "Login";
   static const logInAsCostomer = "Login As Coustomer";
-   static const notRegistered = "Not Registered Yet??";
+  static const notRegistered = "Not Registered Yet??";
 
   static const registerAsCostomer = "Register As Coustomer";
   static const workWithUs = "Work With Us";
@@ -49,7 +49,7 @@ class Strings {
   static const passwordLength = "Password must be 8 characters long";
   static const signInText = "Please Use The Correct Details to Login.";
 
-  //SignUp Page
+  //Cost SignUp Page
   static const fullName = "Full Name";
   static const enterName = "Enter your name";
   static const passwordlabel = "Enter your password";
@@ -68,6 +68,7 @@ class Strings {
   static const nationalId = "National ID";
   static const idNo = "ID Number";
   static const password = "Password";
+
   static const confirmPass = "Confirm-Password";
   static const province = "Province";
   static const district = "District";
@@ -92,6 +93,7 @@ class Strings {
   static const register = "Register Now";
   static const alreadyHaveAnAcc = "Already have an account?";
   static const loginIn = "Login in";
+  static const logInAsProfessional = "Login As Professional";
 
   //Forget Password
 
@@ -111,6 +113,10 @@ class Strings {
   static const reChangePasswordlabel = "User@123";
   static const reEnterYourNewPassword = "Re-Enter Your New Password";
   static const savePassword = "Save";
+
+  //Pro SignUp Page
+  static const confirmPassword = "Confirm Password";
+  static const profession = "Profession";
 }
 
 //DropDown List
@@ -181,5 +187,12 @@ class DropDown {
     "8",
     "9",
     "10"
+  ];
+  static const professionList = [
+    "Select Profession",
+    "Beauty Expert",
+    "Plumbing",
+    "Health Care",
+    "Electrician"
   ];
 }

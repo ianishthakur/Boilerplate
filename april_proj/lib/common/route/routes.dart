@@ -7,4 +7,6 @@ class Routes {
   static const selectLanguage = "/selectELanguage";
   static const forgotPassword = "/forgotPassword";
   static const changePassword = "/changePassword";
+  static const proLogin = "/proLogin";
+  static const proSignup = "/proSignup";
 }

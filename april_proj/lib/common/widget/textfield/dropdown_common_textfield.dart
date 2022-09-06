@@ -136,8 +136,8 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     ),
                   ),
                   Container(
+                    padding: EdgeInsets.only(left: 14.0),
                     width: 100,
-                    padding: EdgeInsets.only(left: 8.0),
                     child: Text(
                       Strings.ward,
                       style: TextStyle(
@@ -146,8 +146,10 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 25,
+                  ),
                   Container(
-                    margin: EdgeInsets.only(left: 10.0),
                     width: 100,
                     child: Text(
                       Strings.tole,
