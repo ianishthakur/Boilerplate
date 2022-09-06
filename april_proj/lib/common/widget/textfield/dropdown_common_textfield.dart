@@ -50,27 +50,28 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     child: SizedBox(
                       width: 140,
                       child: DropdownButtonHideUnderline(
-                        child: DropdownButton(
-                          icon: Icon(Icons.arrow_drop_down_circle_outlined),
-                          iconSize: 24,
-                          iconEnabledColor: Colors.blue,
-                          isExpanded: true,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 6.0),
+                          child: DropdownButton(
+                            iconEnabledColor: Colors.blue,
+                            isExpanded: true,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                            ),
+                            value: _selectedVal,
+                            items: _provinceList
+                                .map((e) => DropdownMenuItem(
+                                      child: Text(e),
+                                      value: e,
+                                    ))
+                                .toList(),
+                            onChanged: (value) {
+                              setState(() {
+                                _selectedVal = value as String;
+                              });
+                            },
                           ),
-                          value: _selectedVal,
-                          items: _provinceList
-                              .map((e) => DropdownMenuItem(
-                                    child: Text(e),
-                                    value: e,
-                                  ))
-                              .toList(),
-                          onChanged: (value) {
-                            setState(() {
-                              _selectedVal = value as String;
-                            });
-                          },
                         ),
                       ),
                     ),
@@ -84,27 +85,28 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     child: SizedBox(
                       width: 140,
                       child: DropdownButtonHideUnderline(
-                        child: DropdownButton(
-                          icon: Icon(Icons.arrow_drop_down_circle_outlined),
-                          iconSize: 24,
-                          iconEnabledColor: Colors.blue,
-                          isExpanded: true,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 6.0),
+                          child: DropdownButton(
+                            iconEnabledColor: Colors.blue,
+                            isExpanded: true,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                            ),
+                            value: _selectedVal2,
+                            items: _districtList
+                                .map((e) => DropdownMenuItem(
+                                      child: Text(e),
+                                      value: e,
+                                    ))
+                                .toList(),
+                            onChanged: (value) {
+                              setState(() {
+                                _selectedVal2 = value as String;
+                              });
+                            },
                           ),
-                          value: _selectedVal2,
-                          items: _districtList
-                              .map((e) => DropdownMenuItem(
-                                    child: Text(e),
-                                    value: e,
-                                  ))
-                              .toList(),
-                          onChanged: (value) {
-                            setState(() {
-                              _selectedVal2 = value as String;
-                            });
-                          },
                         ),
                       ),
                     ),
@@ -116,6 +118,49 @@ class _DropDownWidgetState extends State<DropDownWidget> {
         ),
         SizedBox(
           height: 10,
+        ),
+        Container(
+          width: double.infinity,
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 100,
+                    child: Text(
+                      Strings.municipality,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      Strings.ward,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10.0),
+                    width: 100,
+                    child: Text(
+                      Strings.tole,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
         Column(
           children: [
@@ -132,25 +177,28 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     width: 100,
                     height: 48,
                     child: DropdownButtonHideUnderline(
-                      child: DropdownButton(
-                        iconEnabledColor: Colors.blue,
-                        isExpanded: true,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                        ),
-                        value: _selectedVal3,
-                        items: _municipalityList
-                            .map((e) => DropdownMenuItem(
-                                  child: Text(e),
-                                  value: e,
-                                ))
-                            .toList(),
-                        onChanged: (value) {
-                          setState(() {
-                            _selectedVal3 = value as String;
-                          });
-                        },
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 6.0),
+                        child: (DropdownButton(
+                          iconEnabledColor: Colors.blue,
+                          isExpanded: true,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                          value: _selectedVal3,
+                          items: _municipalityList
+                              .map((e) => DropdownMenuItem(
+                                    child: Text(e),
+                                    value: e,
+                                  ))
+                              .toList(),
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedVal3 = value as String;
+                            });
+                          },
+                        )),
                       ),
                     ),
                   ),
@@ -165,25 +213,28 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     width: 100,
                     height: 48,
                     child: DropdownButtonHideUnderline(
-                      child: DropdownButton(
-                        iconEnabledColor: Colors.blue,
-                        isExpanded: true,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 6.0),
+                        child: DropdownButton(
+                          iconEnabledColor: Colors.blue,
+                          isExpanded: true,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                          value: _selectedVal4,
+                          items: _wardList
+                              .map((e) => DropdownMenuItem(
+                                    child: Text(e),
+                                    value: e,
+                                  ))
+                              .toList(),
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedVal4 = value as String;
+                            });
+                          },
                         ),
-                        value: _selectedVal3,
-                        items: _municipalityList
-                            .map((e) => DropdownMenuItem(
-                                  child: Text(e),
-                                  value: e,
-                                ))
-                            .toList(),
-                        onChanged: (value) {
-                          setState(() {
-                            _selectedVal3 = value as String;
-                          });
-                        },
                       ),
                     ),
                   ),
@@ -198,25 +249,28 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                     width: 100,
                     height: 48,
                     child: DropdownButtonHideUnderline(
-                      child: DropdownButton(
-                        iconEnabledColor: Colors.blue,
-                        isExpanded: true,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 6.0),
+                        child: DropdownButton(
+                          iconEnabledColor: Colors.blue,
+                          isExpanded: true,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                          value: _selectedVal5,
+                          items: _toleList
+                              .map((e) => DropdownMenuItem(
+                                    child: Text(e),
+                                    value: e,
+                                  ))
+                              .toList(),
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedVal5 = value as String;
+                            });
+                          },
                         ),
-                        value: _selectedVal3,
-                        items: _municipalityList
-                            .map((e) => DropdownMenuItem(
-                                  child: Text(e),
-                                  value: e,
-                                ))
-                            .toList(),
-                        onChanged: (value) {
-                          setState(() {
-                            _selectedVal3 = value as String;
-                          });
-                        },
                       ),
                     ),
                   ),

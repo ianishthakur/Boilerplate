@@ -3,11 +3,13 @@ import 'dart:io';
 import 'package:boilerplate/common/widget/textfield/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
+import '../../../../common/route/routes.dart';
 import '../../../../common/widget/textfield/dropdown.02.dart';
 import '../../../../common/widget/textfield/dropdown_common_textfield.dart';
 import '../../../../common/widget/textfield/signUp_common_textfield.dart';
@@ -54,6 +56,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   final _municipalityList = DropDown.municipalityList;
   final _wardList = DropDown.wardList;
   final _toleList = DropDown.toleList;
+
+  //I accept checkBox
+  bool checkBox = false;
 
   Future pickImage(ImageSource source) async {
     try {
@@ -160,6 +165,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             ),
                             Container(
                               width: 150,
+                              padding: EdgeInsets.only(left: 8.0),
                               child: Text(
                                 Strings.district,
                                 style: TextStyle(
@@ -171,9 +177,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           ],
                         ),
                         Container(
-                            height: 130,
-                            child:
-                                SizedBox(height: 100, child: DropDownWidget())),
+                          height: 145,
+                          child: SizedBox(height: 100, child: DropDownWidget()),
+                        ),
                         Container(
                           margin: EdgeInsets.symmetric(vertical: 10),
                           width: double.infinity,
@@ -211,6 +217,135 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                             ],
                           ),
+                        ),
+                        Container(
+                          width: 400,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 30,
+                                    child: MaterialButton(
+                                      onPressed: () {},
+                                      child: Checkbox(
+                                        value: checkBox,
+                                        onChanged: (bool? value) {
+                                          print(value);
+                                          setState(() {
+                                            checkBox = value!;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: GestureDetector(
+                                      child: Text(Strings.iAccept,
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 14)),
+                                      onTap: () {
+                                        setState(() {
+                                          checkBox = !checkBox;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 200,
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            MaterialButton(
+                                              padding:
+                                                  EdgeInsets.only(left: 10),
+                                              onPressed: () {},
+                                              child: Text(
+                                                Strings.terms,
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  decoration:
+                                                      TextDecoration.underline,
+                                                  color: Colors.blue,
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              child: Text(
+                                                Strings.and,
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                    color: Colors.black),
+                                              ),
+                                            ),
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              child: MaterialButton(
+                                                padding:
+                                                    EdgeInsets.only(left: 4),
+                                                onPressed: () {},
+                                                child: Text(
+                                                  Strings.privacy,
+                                                  textAlign: TextAlign.left,
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    decoration: TextDecoration
+                                                        .underline,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        MaterialButton(
+                          onPressed: () {},
+                          color: Colors.green,
+                          minWidth: 400,
+                          height: 48,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Text(
+                            Strings.register,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              child: Text(Strings.alreadyHaveAnAcc),
+                            ),
+                            Container(
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(context, Routes.login);
+                                },
+                                child: Text(
+                                  Strings.loginIn,
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),

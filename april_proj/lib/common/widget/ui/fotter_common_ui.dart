@@ -8,17 +8,19 @@ class FotterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
-      body: Column(
-        children: [
-          component,
-          Text(
-            'Footer',
-            style: (TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: Colors.green)),
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            component,
+            Text(
+              'Footer',
+              style: (TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.green)),
+            ),
+          ],
+        ),
       ),
     ));
   }

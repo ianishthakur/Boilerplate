@@ -25,6 +25,14 @@ class Strings {
 
   //LogIn Page
   static const logIn = "Login";
+  static const logInAsCostomer = "Login As Coustomer";
+   static const notRegistered = "Not Registered Yet??";
+
+  static const registerAsCostomer = "Register As Coustomer";
+  static const workWithUs = "Work With Us";
+  static const or = "Or";
+  static const logInHere = "Login Here!!";
+  static const registerAsProfessional = "Register As Professional";
   static const welcomeBack = "Welcome Back";
   static const emailLable = "Email";
   static const passwordLable = "Password";
@@ -36,10 +44,10 @@ class Strings {
   static const forgotPassword = "Forgot Password ?";
   static const signUp = "Sign up";
   static const dontHaveAcc = "Don't have a Account? ";
-  static const loginText = "Login";
+
   static const passwordValid = "Password must be valid";
   static const passwordLength = "Password must be 8 characters long";
-  static const signInText = "Please sign in to continue.";
+  static const signInText = "Please Use The Correct Details to Login.";
 
   //SignUp Page
   static const fullName = "Full Name";
@@ -77,13 +85,13 @@ class Strings {
   static const takePhoto = "Take Photo";
   static const idNumber = "ID Number";
   static const idNoLabel = "1234-56-7890";
-  static const iAccept = "I Accept the";
+  static const iAccept = "I accept the";
   static const terms = "Terms of Use";
-  static const and = "&";
+  static const and = " &";
   static const privacy = "Privacy Policy";
   static const register = "Register Now";
   static const alreadyHaveAnAcc = "Already have an account?";
-  static const signIn = "Signin";
+  static const loginIn = "Login in";
 
   //Forget Password
 
@@ -103,13 +111,13 @@ class Strings {
   static const reChangePasswordlabel = "User@123";
   static const reEnterYourNewPassword = "Re-Enter Your New Password";
   static const savePassword = "Save";
-
-  //DropDown List
-
 }
+
+//DropDown List
 
 class DropDown {
   static const provincelist = [
+    "Select Province",
     "Province No 1.",
     "Madhesh Pradesh",
     " Bagmati Pradesh",
@@ -119,6 +127,7 @@ class DropDown {
     "Sudur Pashchim Pradesh",
   ];
   static const districtList = [
+    "Select District",
     "Bhojpur",
     "Dhankuta",
     "Ilam",
@@ -134,8 +143,21 @@ class DropDown {
     "Terhathum",
     "Udayapur",
   ];
-  static const municipalityList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  static const municipalityList = [
+    "Select Municipality",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+  ];
   static const wardList = [
+    "Select Ward",
     "1",
     "2",
     "3",
@@ -147,5 +169,17 @@ class DropDown {
     "9",
     "10",
   ];
-  static const toleList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  static const toleList = [
+    "Select Tole",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+  ];
 }
