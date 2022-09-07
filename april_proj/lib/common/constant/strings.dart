@@ -62,11 +62,7 @@ class Strings {
   static const profileImage = "Profile Image";
   static const uploadImage = "Upload Image";
   static const takePic = "Take Photo";
-  static const selectId = "Select Government ID";
-  static const citizenship = "Citizenship";
-  static const passport = "Passport";
-  static const nationalId = "National ID";
-  static const idNo = "ID Number";
+
   static const password = "Password";
 
   static const confirmPass = "Confirm-Password";
@@ -84,8 +80,7 @@ class Strings {
   static const selectFile = "Select File";
   static const noFileSelected = "No File Selected";
   static const takePhoto = "Take Photo";
-  static const idNumber = "ID Number";
-  static const idNoLabel = "1234-56-7890";
+
   static const iAccept = "I accept the";
   static const terms = "Terms of Use";
   static const and = " &";
@@ -117,6 +112,13 @@ class Strings {
   //Pro SignUp Page
   static const confirmPassword = "Confirm Password";
   static const profession = "Profession";
+  static const selectGovId = "Select Government Issued ID";
+  static const idNumber = "ID Number";
+  static const idNoLabel = "1234-56-7890";
+  static const idImage = "ID Image";
+  static const policeReport = "Police Report";
+  static const medicalReport = "Medical Report";
+  static const expCertificate = "Experience Certificate";
 }
 
 //DropDown List
@@ -188,11 +190,18 @@ class DropDown {
     "9",
     "10"
   ];
+  //professional SignUP
   static const professionList = [
     "Select Profession",
     "Beauty Expert",
     "Plumbing",
     "Health Care",
     "Electrician"
+  ];
+  static const selectGovIdList = [
+    "Citizenship/Narional ID Card",
+    "Citizenship",
+    "National ID Card",
+    "Driving License",
   ];
 }

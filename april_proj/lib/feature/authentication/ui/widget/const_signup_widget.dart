@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:boilerplate/common/widget/textfield/image_picker.dart';
+import 'package:boilerplate/common/widget/textfield/profileImage_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -37,6 +37,17 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   //ImagePicker Text Field
   File? _image;
 
+ Future pickImage(ImageSource source) async {
+    try {
+      final image = await ImagePicker().pickImage(source: source);
+      if (image == null) return;
+      final imageTemporary = File(image.path);
+      setState(() => this._image = imageTemporary);
+    } on PlatformException catch (e) {
+      print("Failed to pick image:$e");
+    }
+  }
+
   //DropDown TextField
   _DropDownWidgetState() {
     _selectedVal = _provinceList[0];
@@ -60,16 +71,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   //I accept checkBox
   bool checkBox = false;
 
-  Future pickImage(ImageSource source) async {
-    try {
-      final image = await ImagePicker().pickImage(source: source);
-      if (image == null) return;
-      final imageTemporary = File(image.path);
-      setState(() => this._image = imageTemporary);
-    } on PlatformException catch (e) {
-      print("Failed to pick image:$e");
-    }
-  }
+ 
 
   @override
   Widget build(BuildContext context) {
