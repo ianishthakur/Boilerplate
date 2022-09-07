@@ -37,7 +37,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   //ImagePicker Text Field
   File? _image;
 
- Future pickImage(ImageSource source) async {
+  Future pickImage(ImageSource source) async {
     try {
       final image = await ImagePicker().pickImage(source: source);
       if (image == null) return;
@@ -71,11 +71,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   //I accept checkBox
   bool checkBox = false;
 
- 
-
   @override
   Widget build(BuildContext context) {
-    
     final width = MediaQuery.of(context).size.width;
     return (Scaffold(
       body: SafeArea(
@@ -306,7 +303,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         ),
                       ),
                       MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.login);
+                        },
                         color: Colors.green,
                         minWidth: 400,
                         height: 48,

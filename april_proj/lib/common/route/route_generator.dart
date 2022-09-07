@@ -1,5 +1,6 @@
 import 'package:boilerplate/feature/authentication/ui/screen/const_signup_screen.dart';
 import 'package:boilerplate/feature/authentication/ui/screen/pro_signup_Screen.dart';
+import 'package:boilerplate/feature/homeScreen/ui/screen/homeScreen.dart';
 import 'package:boilerplate/feature/onboard/ui/screen/forgot_page.dart';
 import 'package:boilerplate/feature/onboard/ui/screen/select_language_page.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,10 @@ class RouteGenerator {
       case Routes.proLogin:
         return MaterialPageRoute(builder: (_) => ProLoginScreen());
       case Routes.proSignup:
-        return MaterialPageRoute(builder: (_)=> ProSignUpScreen());
+        return MaterialPageRoute(builder: (_) => ProSignUpScreen());
+
+      case Routes.homePage:
+        return MaterialPageRoute(builder: (_) => HomeScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => SplashPage());

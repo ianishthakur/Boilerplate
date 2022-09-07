@@ -113,8 +113,8 @@ class Strings {
   static const confirmPassword = "Confirm Password";
   static const profession = "Profession";
   static const selectGovId = "Select Government Issued ID";
-  static const idNumber = "ID Number";
-  static const idNoLabel = "1234-56-7890";
+  static const idNumber = "ID Number(1234-56-7890)";
+
   static const idImage = "ID Image";
   static const policeReport = "Police Report";
   static const medicalReport = "Medical Report";
@@ -199,7 +199,7 @@ class DropDown {
     "Electrician"
   ];
   static const selectGovIdList = [
-    "Citizenship/Narional ID Card",
+    "Citizenship/National ID Card/Driving License",
     "Citizenship",
     "National ID Card",
     "Driving License",

@@ -70,9 +70,9 @@ class _ForgetPasswordWidgetState extends State<ForgotPasswordWidget> {
                       MaterialButton(
                         onPressed: () {},
                         minWidth: 130,
-                        height: 42,
+                        height: 48,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         color: Colors.blue,
                         child: Text(
@@ -83,10 +83,10 @@ class _ForgetPasswordWidgetState extends State<ForgotPasswordWidget> {
                       MaterialButton(
                         onPressed: () {},
                         minWidth: 100,
-                        height: 42,
+                        height: 48,
                         color: Colors.blue,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
+                            borderRadius: BorderRadius.circular(10)),
                         child: Text(
                           Strings.reSendCode,
                           style: TextStyle(
@@ -255,6 +255,8 @@ class _ForgetPasswordWidgetState extends State<ForgotPasswordWidget> {
                   MaterialButton(
                     minWidth: 150,
                     height: 48,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
                     onPressed: () {
                       Navigator.pushNamed(context, Routes.changePassword);
                     },

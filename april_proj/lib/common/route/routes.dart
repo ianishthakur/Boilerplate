@@ -9,4 +9,5 @@ class Routes {
   static const changePassword = "/changePassword";
   static const proLogin = "/proLogin";
   static const proSignup = "/proSignup";
+  static const homePage = "/homePage";
 }

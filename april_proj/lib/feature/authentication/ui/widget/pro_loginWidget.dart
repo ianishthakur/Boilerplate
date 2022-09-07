@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
+import '../../../../common/route/routes.dart';
 import '../../../../common/widget/textfield/login_common_textfield.dart';
 import '../../bloc/authentication_cubit.dart';
 import '../../bloc/authentication_state.dart';
@@ -119,7 +120,10 @@ class _ProLoginWidgetState extends State<ProLoginWidget> {
                                   ),
                                   Container(
                                     child: TextButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.pushNamed(
+                                            context, Routes.proSignup);
+                                      },
                                       child: Text(
                                         Strings.registerAsProfessional,
                                         style: TextStyle(

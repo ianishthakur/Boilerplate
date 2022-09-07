@@ -88,7 +88,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                     minWidth: 150,
                     height: 48,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
                       Strings.savePassword,
