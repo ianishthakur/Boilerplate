@@ -1,4 +1,4 @@
-import 'package:boilerplate/feature/drawer_NavigatorScreen/ui/widget/navigator_Pages/settings_Widget.dart';
+import 'package:boilerplate/feature/drawer_NavigatorScreen/ui/widget/navigator_Widget/settings_Widget.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatelessWidget {
