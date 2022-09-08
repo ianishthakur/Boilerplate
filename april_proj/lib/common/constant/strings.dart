@@ -119,6 +119,14 @@ class Strings {
   static const policeReport = "Police Report";
   static const medicalReport = "Medical Report";
   static const expCertificate = "Experience Certificate";
+
+  //Drawer Navigator
+  static const setting = "Settings";
+  static const history = "History";
+  static const editProfile = "Edit Profile";
+  static const rewardPoints = "Reward Points";
+  static const helpCenter = "Help Center";
+  static const inviteUrFrnd = "Invite Your Friends";
 }
 
 //DropDown List

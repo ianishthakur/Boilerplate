@@ -10,6 +10,7 @@ import 'package:boilerplate/common/route/routes.dart';
 import 'package:device_preview/device_preview.dart';
 import '../common/widget/bloc/multi_bloc_listing.dart';
 import '../common/widget/bloc/multi_repo_listing.dart';
+import '../feature/drawer_NavigatorScreen/ui/widget/navigatorDrawer_Widget.dart';
 import 'notification_wrapper.dart';
 import 'update_wrapper.dart';
 
@@ -41,6 +42,8 @@ class _AppState extends State<App> {
             title: Strings.APP_TITLE,
             initialRoute: Routes.root,
             onGenerateRoute: RouteGenerator.generateRoute,
+          
+           
           )),
         ),
       ),

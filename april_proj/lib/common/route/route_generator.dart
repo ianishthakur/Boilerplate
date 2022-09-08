@@ -1,3 +1,4 @@
+import 'package:boilerplate/app/app_dev.dart';
 import 'package:boilerplate/feature/authentication/ui/screen/const_signup_screen.dart';
 import 'package:boilerplate/feature/authentication/ui/screen/pro_signup_Screen.dart';
 import 'package:boilerplate/feature/homeScreen/ui/screen/homeScreen.dart';
@@ -10,7 +11,14 @@ import 'package:boilerplate/feature/onboard/ui/screen/splash_page.dart';
 
 import '../../feature/authentication/ui/screen/const_login_screen.dart';
 import '../../feature/authentication/ui/screen/pro_loginScreen.dart';
+import '../../feature/drawer_NavigatorScreen/ui/screen/navigator_Screen/editProfile_Screen.dart';
+import '../../feature/drawer_NavigatorScreen/ui/screen/navigator_Screen/helpCenter_Screen.dart';
+import '../../feature/drawer_NavigatorScreen/ui/screen/navigator_Screen/history_Screen.dart';
+import '../../feature/drawer_NavigatorScreen/ui/screen/navigator_Screen/inviteUrFrnd_Screen.dart';
+import '../../feature/drawer_NavigatorScreen/ui/screen/navigator_Screen/rewardPointWidget.dart';
+import '../../feature/drawer_NavigatorScreen/ui/screen/navigator_Screen/settings_Screen.dart';
 import '../../feature/onboard/ui/screen/changePassword_page.dart';
+import '../constant/env.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -38,7 +46,20 @@ class RouteGenerator {
 
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => HomeScreen());
-
+        //  case Routes.app:
+        // return MaterialPageRoute(builder: (_) => App(env: EnvValue.development));
+       case Routes.settings:
+        return MaterialPageRoute(builder: (_) => SettingsScreen());
+        case Routes.rewardPoint:
+        return MaterialPageRoute(builder: (_) => RewardPointScreen());
+        case Routes.inviteUrFrnd:
+        return MaterialPageRoute(builder: (_) => InviteUrFrndScreen());
+        case Routes.history:
+        return MaterialPageRoute(builder: (_) => HistoryScreen());
+        case Routes.helpCenter:
+        return MaterialPageRoute(builder: (_) => HelpCenterScreen());
+        case Routes.editProfile:
+        return MaterialPageRoute(builder: (_) => EditProfileScreen());
       default:
         return MaterialPageRoute(builder: (_) => SplashPage());
     }

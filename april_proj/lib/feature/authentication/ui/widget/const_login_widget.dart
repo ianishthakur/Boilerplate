@@ -133,7 +133,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                   SizedBox(height: 10),
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.homePage);
+                    },
                     color: Colors.green,
                     minWidth: 400,
                     height: 48,
