@@ -1,6 +1,7 @@
 import 'package:boilerplate/app/app_dev.dart';
 import 'package:boilerplate/feature/authentication/ui/screen/const_signup_screen.dart';
 import 'package:boilerplate/feature/authentication/ui/screen/pro_signup_Screen.dart';
+import 'package:boilerplate/feature/drawer_NavigatorScreen/ui/widget/navigatorDrawer_Widget.dart';
 import 'package:boilerplate/feature/homeScreen/ui/screen/homeScreen.dart';
 import 'package:boilerplate/feature/onboard/ui/screen/forgot_page.dart';
 import 'package:boilerplate/feature/onboard/ui/screen/select_language_page.dart';
@@ -60,6 +61,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => HelpCenterScreen());
         case Routes.editProfile:
         return MaterialPageRoute(builder: (_) => EditProfileScreen());
+             case Routes.navigatorDrawer:
+        return MaterialPageRoute(builder: (_) => NavigatorDrawerWidget());
       default:
         return MaterialPageRoute(builder: (_) => SplashPage());
     }

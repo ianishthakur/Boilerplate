@@ -1,6 +1,7 @@
 import 'package:boilerplate/common/widget/textfield/drawer_common_Text.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../common/constant/assets.dart';
 import '../../../../common/constant/strings.dart';
 import '../../../../common/route/routes.dart';
 
@@ -9,42 +10,44 @@ class NavigatorDrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: Material(
-        color: Colors.black,
-        child: Column(
-          children: [
-            DrawerItem(
-              name: Strings.setting,
-              icon: Icons.settings,
-              onPressed: onItemPressed(context, index: 0),
-            ),
-            DrawerItem(
-              name: Strings.history,
-              icon: Icons.settings,
-              onPressed: onItemPressed(context, index: 1),
-            ),
-            DrawerItem(
-              name: Strings.editProfile,
-              icon: Icons.settings,
-              onPressed: onItemPressed(context, index: 2),
-            ),
-            DrawerItem(
-              name: Strings.rewardPoints,
-              icon: Icons.settings,
-              onPressed: onItemPressed(context, index: 3),
-            ),
-            DrawerItem(
-              name: Strings.helpCenter,
-              icon: Icons.settings,
-              onPressed: onItemPressed(context, index: 4),
-            ),
-            DrawerItem(
-              name: Strings.inviteUrFrnd,
-              icon: Icons.settings,
-              onPressed: onItemPressed(context, index: 5),
-            ),
-          ],
+    return SafeArea(
+      child: Drawer(
+        child: Material(
+          child: Column(
+            children: [
+              headerWidget(),
+              DrawerItem(
+                name: Strings.setting,
+                icon: Icons.settings_outlined,
+                onPressed: () => onItemPressed(context, index: 0),
+              ),
+              DrawerItem(
+                name: Strings.history,
+                icon: Icons.history,
+                onPressed: () => onItemPressed(context, index: 1),
+              ),
+              DrawerItem(
+                name: Strings.editProfile,
+                icon: Icons.person_add_alt,
+                onPressed: () => onItemPressed(context, index: 2),
+              ),
+              DrawerItem(
+                name: Strings.rewardPoints,
+                icon: Icons.credit_score_outlined,
+                onPressed: () => onItemPressed(context, index: 3),
+              ),
+              DrawerItem(
+                name: Strings.helpCenter,
+                icon: Icons.help_center_outlined,
+                onPressed: () => onItemPressed(context, index: 4),
+              ),
+              DrawerItem(
+                name: Strings.inviteUrFrnd,
+                icon: Icons.share_outlined,
+                onPressed: () => onItemPressed(context, index: 5),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -77,5 +80,19 @@ class NavigatorDrawerWidget extends StatelessWidget {
         Navigator.pop(context);
         break;
     }
+  }
+
+  Widget headerWidget() {
+    return DrawerHeader(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: <Color>[Colors.green, Colors.greenAccent],
+        ),
+      ),
+      child: (Image.asset(
+        Assets.icons,
+        width: double.infinity,
+      )),
+    );
   }
 }

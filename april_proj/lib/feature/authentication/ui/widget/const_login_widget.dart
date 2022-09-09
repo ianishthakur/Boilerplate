@@ -95,11 +95,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                   Row(
                     children: [
                       MaterialButton(
+                        
                         onPressed: () {},
                         child: Checkbox(
                           value: checkBox,
                           onChanged: (bool? value) {
-                            print(value);
+                           
                             setState(() {
                               checkBox = value!;
                             });
@@ -107,6 +108,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         ),
                       ),
                       GestureDetector(
+                        
                         child: Text(Strings.remberme,
                             style: TextStyle(color: Colors.grey)),
                         onTap: () {
@@ -116,6 +118,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         },
                       ),
                       Container(
+                        
                         child: MaterialButton(
                           onPressed: () {
                             Navigator.pushNamed(context, Routes.forgotPassword);
@@ -142,7 +145,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     child: Text(
-                      Strings.logInAsCostomer,
+                      Strings.logInAsCustomer,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -168,7 +171,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           context, Routes.singup);
                                     },
                                     child: Text(
-                                      Strings.registerAsCostomer,
+                                      Strings.registerAsCustomer,
                                       style: TextStyle(
                                         decoration: TextDecoration.underline,
                                         color: Colors.blue,

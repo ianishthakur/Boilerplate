@@ -25,10 +25,10 @@ class Strings {
 
   //LogIn Page
   static const logIn = "Login";
-  static const logInAsCostomer = "Login As Coustomer";
+  static const logInAsCustomer = "Login As Customer";
   static const notRegistered = "Not Registered Yet??";
 
-  static const registerAsCostomer = "Register As Coustomer";
+  static const registerAsCustomer = "Register As Customer";
   static const workWithUs = "Work With Us";
   static const or = "Or";
   static const logInHere = "Login Here!!";

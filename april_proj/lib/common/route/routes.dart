@@ -17,5 +17,6 @@ class Routes {
   static const history = "/history";
   static const helpCenter = "/helpCenter";
   static const editProfile = "/editProfile";
+  static const navigatorDrawer = "/navigatorDrawer";
 
 }
