@@ -12,6 +12,7 @@ class NavigatorDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Drawer(
+        
         child: Material(
           child: Column(
             children: [

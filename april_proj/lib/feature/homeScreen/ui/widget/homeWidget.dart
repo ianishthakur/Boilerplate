@@ -3,6 +3,7 @@ import 'package:boilerplate/feature/drawer_NavigatorScreen/ui/widget/navigatorDr
 import 'package:flutter/material.dart';
 
 import '../../../../common/constant/assets.dart';
+import '../../../../common/route/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,60 +12,91 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          Container(
-            width: 300,
-            color: Colors.red,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        automaticallyImplyLeading: false,
+        leadingWidth: 0,
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+                child: Row(
               children: [
                 Container(
-                  child: Image.asset(
-                    Assets.icons,
-                    width: 60,
-                    height: 60,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.navigatorDrawer);
+                    },
+                    child: Image.asset(
+                      Assets.icons,
+                      height: 60,
+                    ),
                   ),
                 ),
                 Container(
-                    child: Column(
-                  children: [
-                    Text(
-                      "Welcome Back!",
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                    Text(
-                      "Welcome Back!",
-                      style: TextStyle(color: Colors.blue),
-                    )
-                  ],
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 150,
+                        child: Text(
+                          "Welcome Back!",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black54,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Container(
+                        width: 150,
+                        child: Text(
+                          "User@123",
+                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            )),
+          ],
+        ),
+        actions: [
+          Container(
+            child: Row(
+              children: [
+                Container(
+                    child: Icon(
+                  Icons.search,
+                  size: 28,
+                )),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                    child: Icon(
+                  Icons.notifications,
+                  size: 28,
                 )),
                 Container(
-                  child: Image.asset(
-                    Assets.icons,
-                    width: 60,
-                    height: 60,
-                  ),
-                ),
-                Container(
-                  child: Image.asset(
-                    Assets.icons,
-                    width: 60,
-                    height: 60,
-                  ),
-                ),
+                    margin: EdgeInsets.only(right: 12),
+                    width: 40,
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Routes.navigatorDrawer);
+                      },
+                      child: Icon(
+                        Icons.menu,
+                        size: 28,
+                        color: Colors.blue,
+                      ),
+                    )),
               ],
             ),
           )
         ],
-
         backgroundColor: Colors.white,
-        // leading: UserProfileScreen(),
         toolbarHeight: 70,
-        // leadingWidth: 70,
-        title: Text("Hey How r u"),
         iconTheme: IconThemeData(color: Colors.blue),
       ),
-      drawer: NavigatorDrawerWidget(),
     );
   }
 }
