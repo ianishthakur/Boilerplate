@@ -44,7 +44,6 @@ class SignUpCommonTextField extends StatelessWidget {
           obscureText: obscureText,
           validator: validator,
           focusNode: focusNode,
-         
           style: TextStyle(
             fontWeight: FontWeight.w500,
           ),
@@ -52,7 +51,6 @@ class SignUpCommonTextField extends StatelessWidget {
             labelText: labelText,
             hintText: hintText,
             hintStyle: hintStyle,
-           
             border: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.green, width: 1),
             ),
